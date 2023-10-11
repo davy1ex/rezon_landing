@@ -1,12 +1,11 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{% block title %}Главная страница{% endblock %}</title>
+    <title>{% block title %}Устройство Резон{% endblock %}</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
@@ -16,78 +15,69 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
 </head>
 <body>
-    <aside>
-        <img src="{% static 'main/img/logo.jpg' %}" alt="Логотип">
-    </aside>
+    <div class="block_header">
+        <img src="{% static 'main/img/rezon_logo.jpg' %}" alt="Логотип Резон">
+    </div>
+        
+    
     <main>
-        <h1>
-            Упаси 1.0
+        <h1 class="header_style">
+            Устройство Резон
         </h1>
             <div class="description">
-                Видеокарта A100 GPU от NVIDIA - это ускоритель для вычислительных задач, который обеспечивает непревзойденное ускорение нагрузок ИИ, анализа данных и HPC для решения самых сложных вычислительных задач. Она основана на архитектуре NVIDIA Ampere и содержит 6912 ядер CUDA и 40 Гб оперативной памяти HBM2 12. Видеокарта A100 GPU обладает самой быстрой в мире пропускной способностью памяти (более 2 ТБ/с), что позволяет работать с самыми крупными моделями и наборами данных.
+                Устройство Резон предназначено для тестирования и отладки электронных устройств, а также для обеспечения информационной безопасности. Оно включает в себя множество функций, включая анализ данных, обнаружение угроз, тестирование производительности и многое другое.
             </div>
-        <div class="nvidia">
-            <img src="{% static 'main/img/nvidia.png' %}" alt="Видеокарта">
+        <div class="rezon">
+            <img src="{% static 'main/img/rezon_device.png' %}" style="width:800px" alt="Устройство Резон">
         </div>
         <div class="assemblies">
-            Сборки на базе видеокарты A100 GPU от NVIDIA могут быть использованы для решения самых сложных вычислительных задач, таких как анализ данных, HPC и ИИ. Мы предлагаем доступ к конфигурации g2.2 (56 vCPU, 2 GPU A100). Компания Yandex предлагает аналогичное решение по цене 400 тысяч рублей в месяц.
+            Устройство Резон может быть адаптировано для различных задач, включая анализ данных, тестирование и отладка электронных устройств, а также обеспечение информационной безопасности. Мы предлагаем доступ к полному функционалу устройства, включая программно-аппаратные платформы для тестирования и отладки.
         </div>
         <div class="slider">
-            <img src="{% static 'main/img/slide1.png' %}" alt="Изображение 1">
             <img src="{% static 'main/img/slide2.png' %}" alt="Изображение 2">
+            <img src="{% static 'main/img/slide1.png' %}" alt="Изображение 1">
+            
             <img src="{% static 'main/img/slide3.png' %}" alt="Изображение 3">
         </div>
         <div class="support">
-            В поддержку отечественных разработчиков, мы готовы предложить доступ к нашим мощностям за цену 250 тысяч рублей, при этом доступен ряд опций:
+            Мы предлагаем комплексные решения для ваших проектов. Свяжитесь с нами, чтобы узнать больше о возможностях устройства Резон и как оно может помочь вам достичь ваших целей.
         </div>
-        <div class="textbox-container">
-            <div class="textbox">
-                <p>- Доступ к части вычислительных мощностей с пропорциональным уменьшением стоимости</p>
-            </div>
-            <div class="textbox">
-                <p>- Вам предоставляется право выбрать самим время аренды конфигурации, если хотите оформить аренду на месяц, на неделю, на день или на час.</p>
-            </div>
-            <div class="textbox">
-                <p>- В зависимости от нужды, можем предоставить различные степени доступа к конфигурации</p>
-            </div>
-        </div>
-        <div class="assemblies">
-             В зависимости от нужды, можем предоставить различные степени доступа к конфигурации
-        </div>
-        <div class="assemblies">
-            1) Доступ к виртуальной машине<br>
-            2) Доступ к управлению виртуальной машиной<br>
-            3) Доступ напрямую к аппаратной части сборки
-        </div>
-        <div class="assemblies">
-            Мы молодой сервис, готовый предоставить скидку нашим первым заказчикам.
-            Для получения скидки вам необходимо оставить заявку.
-        </div>
-
+        
     </main>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('.slider').slick({
-                autoplay: true,
-                autoplaySpeed: 5000,
-                fade: true,
-                dots: true,
-                arrows: true,
-                infinite: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
-                nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>'
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="https://vk.com/rezon_63" target="_blank">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Email: <a href="mailto:rezon_contect@mail.ru">rezon_contect@mail.ru</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.slider').slick({
+                    autoplay: true,
+                    autoplaySpeed: 5000,
+                    fade: true,
+                    dots: true,
+                    arrows: true,
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
+                    nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>'
+                });
             });
-        });
-    </script>
-     <form method="post">
-            {% csrf_token %}
-            {{ form.name}}<br>
-            {{ form.email}}<br>
-            {{ form.comment}}<br>
-            <span>{{ error }}</span>
-            <button class="btn btn-success" type="submit">Отправить</button>
-        </form>
+        </script>
+    </body>
+    </html>
+    
 </body>
 </html>
