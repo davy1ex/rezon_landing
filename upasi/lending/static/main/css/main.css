@@ -42,3 +42,44 @@ h1 {
     margin-left: auto;
     margin-right: auto;
 }
+.slider {
+    position: relative;
+    max-width: 600px;
+    max-height: 400px;
+    margin: 0 auto;
+}
+
+.slider img {
+    padding-top: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.slider img.slick-active {
+    opacity: 1;
+}
+
+.slick-prev,
+.slick-next {
+    font-size: 30px;
+    width: 80px;
+    height: 80px;
+    background-color: #fa6c07;
+    color: #fff;
+    top: 50%;
+}
+
+.slick-prev {
+    left: -120px;
+    transform: translateY(50%);
+}
+
+.slick-next {
+    right: -120px;
+    transform: translateY(50%);
+}
