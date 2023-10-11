@@ -1,6 +1,4 @@
 # lendingupasi
-pip install django
-
-cd upasi
-
-python manage.py runserver
+1) pip install django
+2) cd upasi
+3) python manage.py runserver
