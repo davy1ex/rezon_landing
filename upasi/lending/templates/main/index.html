@@ -63,6 +63,7 @@
             Мы молодой сервис, готовый предоставить скидку нашим первым заказчикам.
             Для получения скидки вам необходимо оставить заявку.
         </div>
+
     </main>
     <script type="text/javascript">
         $(document).ready(function(){
@@ -80,6 +81,13 @@
             });
         });
     </script>
-
+     <form method="post">
+            {% csrf_token %}
+            {{ form.name}}<br>
+            {{ form.email}}<br>
+            {{ form.comment}}<br>
+            <span>{{ error }}</span>
+            <button class="btn btn-success" type="submit">Отправить</button>
+        </form>
 </body>
 </html>
